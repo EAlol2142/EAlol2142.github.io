@@ -27,7 +27,7 @@ btn_ugol.addEventListener("click", function () {
 
 btn1.addEventListener("click", () => {
     let data = {
-        name: "name",
+        name: item,
     }
     tg.sendData(JSON.stringify(data));
     tg.close()
