@@ -2,15 +2,41 @@ let tg = window.Telegram.WebApp;
 
 tg.expand();
 
+window.onload = () => {
+    const uploadFile = document.getElementById('upload_file');
+    const uploadBtn = document.getElementById('upload_btn');
+
+    uploadBtn.addEventListener('click', function () {
+        uploadFile.click();
+    });
+
+    uploadFile.addEventListener('change', function () {
+        if(uploadFile.value) {
+            uploadBtn.innerText = uploadFile.value.match(/[\/\\]([\w\d\s\.\-(\)]+)$/)[1];
+        }else {
+            uploadBtn.innerText = 'Файл не выбран'
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
 
 let item = "";
 let choice = "";
 
-let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
+let btn_pipe = document.getElementById("pipe");
+let btn_les = document.getElementById("les");
+let btn_plitka = document.getElementById("plitka");
+let btn_ugol = document.getElementById("ugol");
 
 btn1.addEventListener("click", function(){
     item = "1";
