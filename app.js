@@ -25,9 +25,9 @@ btn_ugol.addEventListener("click", function () {
 
 
 
-btn1.addEventListener("click", () => {
+btn_pipe.addEventListener("click", () => {
     let data = {
-        name: item,
+        name: 'pipe',
     }
     tg.sendData(JSON.stringify(data));
     tg.close()
