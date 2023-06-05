@@ -27,7 +27,7 @@ floor_til.addEventListener("click", function(){
 btn1.addEventListener("click", () => {
    
     let data = {
-        name: item,
+        name: "Al",
     }
     tg.sendData(JSON.stringify(data));
 
